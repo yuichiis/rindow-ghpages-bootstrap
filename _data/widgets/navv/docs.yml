@@ -1,0 +1,24 @@
+menu:
+- caption: Top page
+  link: /docs/
+- separator: " "
+- caption: Documents
+  menu:
+  - caption: doc1
+    link: /docs/doc1.html
+  - caption: doc2
+    link: /docs/doc2/
+  - caption: doc2-1
+    link: /docs/doc2/doc1.html
+  - caption: doc2-2
+    link: /docs/doc2/doc2.html
+  - caption: doc2-2-1
+    link: /docs/doc2/doc2-1.html
+  - caption: doc3
+    link: /docs/doc3.html
+- caption: site page
+  menu:
+  - caption: Blog
+    link: /blog/
+  - caption: About
+    link: /about/

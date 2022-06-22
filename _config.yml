@@ -1,0 +1,111 @@
+### Site settings
+lang: en
+title: "Your awesome title"
+description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
+#meta_description: "default meta tag description.Google does not recommend that all pages have the same description"
+#meta_keywors: "default meta tag keywors.Google does not recommend that all pages have the same description"
+author: "Your name"
+#since: "Your site is since YYYY"
+#baseurl: "/my_dir"
+exclude: [ "README.md", "LICENSE", "Gemfile", "Gemfile.lock", "rindow-ghpages-bootstrap.gemspec" ]
+url: "https://yourdomain.com"
+#email: your-email@domain.com
+#twitter_username: your_twitter_username
+#github_username:  your_github_username
+#google_analytics_id: UA-XXXXXXXX-XX
+#google_ad_client_id: ca-pub-XXXXXXXXXXXXXX
+#google_site_verification: XXXXXXXXXXXXXXXXXXXXXXXXXXX
+#google_custom_search_engine_id: "XXXXXXXX:XXXXXXXXXXXXXXXXXXX"
+#disqus_shortname: your_disqus_shortname
+
+### Build settings
+plugins:
+  - jekyll-paginate
+permalink: "/blog/:year/:month/:day/:title.html"
+images_path: "/assets/img/"
+sass:
+  style: :compressed
+#markdown: kramdown
+#gems: [jekyll-test-plugin, jekyll-jsonify, jekyll-assets]
+
+### Appearance
+appearance:
+  theme: default
+  ###
+  ### Example to enable a wallpaper.
+  ###
+  #header_text_color: "brown"
+  #header_image: none
+  #wallpaper_image: /assets/themes/default/img/wallpaper.png
+  #wallpaper_repeat: repeat
+
+### Blog
+blogpagination: true
+paginate: 5
+paginate_path: "blog/page:num/" # DON'T TOUCH THIS PATH.
+blog:
+  title: "Blog Title"
+  description: "Blog description"
+  title_position: article
+  enable_author: true
+  comment: true
+  share: true
+  category: true
+  #sidearea:
+  #  primary:
+  #    widgets:
+  #    - { widget: categories, caption: "Categories" }
+  #    - { widget: recentposts, caption: "Recent Posts" }
+  #    - { widget: subscribe, caption: "Subscribe" }
+  #theme: blog
+
+### Navigation Bar
+sitesearchscript: true
+navbar:
+  menu:
+    - caption: "Projects"
+      menu:
+        - { caption: "Creating Web pages", link: "#"}
+        - { caption: "Something else here", link: "#"}
+        - { separator: "divider" }
+        - { caption: "miscellaneous", separator: "dropdown-header" }
+        - { caption: "Downloads", link: "#"}
+    - { caption: "Blog", link: "/blog/" }
+    - { caption: "Documents", link: "/docs/" }
+    - { caption: "Help", link: "/help/" }
+    - { caption: "Sitemap", link: "/sitemap/" }
+    - { caption: "About", link: "/about/" }
+
+footer:
+  links:
+    - { caption: "About", link: "/about/" }
+    - { caption: "Sitemap", link: "/sitemap/" }
+
+### Document collections
+collections:
+  docs:
+    #no_ext: true
+    #permalink: "/:collection/:title:output_ext"
+    title: "Documents"
+    description: "some description"
+    #meta_description: "default meta tag description.Google does not recommend that all pages have the same description"
+    #meta_keywors: "default meta tag keywors.Google does not recommend that all pages have the same description"
+    output: true
+    theme: docs
+    comment: true
+    share: true
+    #lang: en
+    #navigator: disable
+    #search_engine_id: 000_google_cse_id_000
+    sidearea:
+      top:
+        widgets:
+        - { widget: navb, name: docs, inline: true }
+      primary:
+        widgets:
+        - { widget: search, caption: "Search" }
+        - { widget: navv, name: docs, item: menu, caption: "Menu", anchor: "menu" }
+        - { widget: free-area, name: docs, item: menu, markdownify: true }
+  help:
+    title: "Help"
+    output: true

@@ -1,0 +1,4 @@
+---
+layout: searchdoc
+title: Search
+---
