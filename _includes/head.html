@@ -1,4 +1,5 @@
 {% capture frameworkcss %}{% include get-theme-value name="frameworkcss" %}{% endcapture %}
+{% capture frameworkcss_integrity %}{% include get-theme-value name="frameworkcss_integrity" %}{% endcapture %}
 {% capture frameworkcsstheme %}{% include get-theme-value name="frameworkcsstheme" %}{% endcapture %}
 {% capture css %}{% include get-theme-value name="css" %}{% endcapture %}
 {% capture font1 %}{% include get-theme-value name="font1" %}{% endcapture %}
@@ -34,7 +35,7 @@
   {% if description %}<meta name="description" content="{{ description }}">{% endif %}
   {% if keywords %}<meta name="keywords" content="{{ keywords }}">{% endif %}
   <link rel="canonical" href="{% include get-absolute-url-ex url=page.url no_ext=globalcurrentcollection.no_ext %}">
-  {% if frameworkcss !="" %}<link rel="stylesheet" href="{{ frameworkcss }}">{% endif %}
+  {% if frameworkcss !="" %}<link rel="stylesheet" href="{{ frameworkcss }}"{% if frameworkcss_integrity != "" %} integrity="{{ frameworkcss_integrity }}"{% endif %} crossorigin="anonymous">{% endif %}
   {% if frameworkcsstheme !="" %}<link rel="stylesheet" href="{{ frameworkcsstheme }}">{% endif %}
   <link rel="stylesheet" href="{{ '/assets/css/core.css' | relative_url }}">
   {% if css !="" %}<link rel="stylesheet" href="{{ css | relative_url }}">{% endif %}
